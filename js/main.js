@@ -141,3 +141,20 @@ tailwind.config = {
     }
   }
 }
+
+window.addEventListener('scroll', () => {
+  const navContactBtn = document.getElementById('navContactBtn');
+  const contactSection = document.getElementById('contact');
+  
+  if (navContactBtn && contactSection) {
+    const rect = contactSection.getBoundingClientRect();
+    
+    if (rect.top <= 200) {
+      navContactBtn.style.opacity = '0'; 
+      navContactBtn.style.pointerEvents = 'none';
+    } else {
+      navContactBtn.style.opacity = '1';
+      navContactBtn.style.pointerEvents = 'auto';
+    }
+  }
+});
