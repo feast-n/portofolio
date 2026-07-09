@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/input.css" />
+  <link rel="stylesheet" href="css/output.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     tailwind.config = {
@@ -435,11 +437,11 @@
           <form id="contactForm" class="bg-neutral-900/30 border border-neutral-800 rounded-[30px] p-8 md:p-10 space-y-6">
             <div>
               <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Nama Lengkap</label>
-              <input type="text" placeholder="Masukkan nama Anda" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
+              <input type="text" name="full-name" pattern="[A-Za-z\s\-']+" placeholder="Masukkan nama Anda" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
             </div>
             <div>
-              <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Email</label>
-              <input type="email" placeholder="nama@email.com" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
+              <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Email / Nomor Telepon</label>
+              <input type="text" name="contact-info" placeholder="nama@email.com atau 081234567890" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
             </div>
             <div>
               <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Subjek</label>
