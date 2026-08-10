@@ -30,11 +30,12 @@
     }
   </script>
 </head>
-<body class="w-full overflow-x-hidden">
+<body class="w-full overflow-x-clip bg-black text-white font-body">
 
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <a href="#hero" class="font-heading text-2xl font-500 tracking-tight uppercase">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-black/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between">
+      <a href="#hero" class="font-heading text-xl sm:text-2xl font-500 tracking-tight uppercase">
         <span class="neon-text">P</span>andu<span class="text-neutral-500">.</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
@@ -44,7 +45,7 @@
         <a href="#experience" class="text-sm font-medium tracking-wide text-neutral-400 hover:text-neon transition-colors">Pengalaman</a>
         <a href="#contact" class="neon-bg text-black px-6 py-2.5 rounded-btn font-semibold text-sm tracking-tight uppercase hover:bg-white transition-colors">Hubungi</a>
       </div>
-      <button id="menuBtn" class="md:hidden relative z-[60] w-10 h-10 flex flex-col items-center justify-center gap-1.5">
+      <button id="menuBtn" class="md:hidden relative z-[60] w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Toggle Navigation">
         <span id="bar1" class="w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
         <span id="bar2" class="w-6 h-0.5 bg-white transition-all duration-300"></span>
         <span id="bar3" class="w-4 h-0.5 bg-white transition-all duration-300 origin-center ml-auto"></span>
@@ -52,56 +53,56 @@
     </div>
   </nav>
 
-  <div id="mobileMenu" class="mobile-menu fixed inset-0 z-[55] bg-black/95 backdrop-blur-md flex flex-col items-center justify-center gap-8">
-    <a href="#about" class="mobile-link font-heading text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Tentang</a>
-    <a href="#skills" class="mobile-link font-heading text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Keahlian</a>
-    <a href="#projects" class="mobile-link font-heading text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Proyek</a>
-    <a href="#experience" class="mobile-link font-heading text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Pengalaman</a>
-    <a href="#contact" class="mobile-link neon-bg text-black px-8 py-4 rounded-btn font-heading text-xl font-500 uppercase tracking-tight mt-4 hover:bg-white transition-colors">Hubungi Saya</a>
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu fixed inset-0 z-[55] bg-black/95 backdrop-blur-md flex flex-col items-center justify-center gap-6 p-6">
+    <a href="#about" class="mobile-link font-heading text-3xl sm:text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Tentang</a>
+    <a href="#skills" class="mobile-link font-heading text-3xl sm:text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Keahlian</a>
+    <a href="#projects" class="mobile-link font-heading text-3xl sm:text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Proyek</a>
+    <a href="#experience" class="mobile-link font-heading text-3xl sm:text-4xl font-300 uppercase tracking-tight text-neutral-300 hover:text-neon transition-colors">Pengalaman</a>
+    <a href="#contact" class="mobile-link neon-bg text-black px-8 py-3.5 rounded-btn font-heading text-lg font-500 uppercase tracking-tight mt-4 hover:bg-white transition-colors">Hubungi Saya</a>
   </div>
 
-  <section id="hero" class="relative min-h-screen flex items-center justify-center hero-bg grain overflow-hidden">
-    <div class="absolute top-1/4 right-10 w-64 h-64 bg-neon/5 rounded-full blur-[100px] animate-float pointer-events-none"></div>
-    <div class="absolute bottom-1/4 left-10 w-48 h-48 bg-neon/5 rounded-full blur-[100px] animate-float pointer-events-none" style="animation-delay:-3s"></div>
-    <div class="absolute top-20 left-1/4 w-2 h-2 bg-neon/40 rounded-full animate-pulse"></div>
-    <div class="absolute bottom-32 right-1/3 w-1.5 h-1.5 bg-neon/30 rounded-full animate-pulse" style="animation-delay:1s"></div>
-    <div class="absolute top-1/2 right-1/4 w-1 h-1 bg-white/20 rounded-full animate-pulse" style="animation-delay:2s"></div>
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative min-h-screen pt-24 pb-16 flex items-center justify-center hero-bg grain overflow-hidden">
+    <div class="absolute top-1/4 right-5 w-48 sm:w-64 h-48 sm:h-64 bg-neon/5 rounded-full blur-[80px] sm:blur-[100px] animate-float pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-5 w-36 sm:w-48 h-36 sm:h-48 bg-neon/5 rounded-full blur-[80px] sm:blur-[100px] animate-float pointer-events-none" style="animation-delay:-3s"></div>
 
-    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+    <div class="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto w-full">
       <div style="animation: slide-up 1s cubic-bezier(0.16,1,0.3,1) 0.2s both">
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-neon mb-6">Junior Web Developer</p>
+        <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-neon mb-4 sm:mb-6">Junior Web Developer</p>
       </div>
       <div style="animation: slide-up 1s cubic-bezier(0.16,1,0.3,1) 0.4s both">
-        <h1 class="font-heading text-5xl md:text-7xl lg:text-[8rem] font-500 leading-[0.9] tracking-tight uppercase mb-8">
+        <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-500 leading-[0.95] sm:leading-[0.9] tracking-tight uppercase mb-6 sm:mb-8 break-words">
           Pandu<br/>
           <span class="text-gradient">Fawaz</span><br/>
           Rabbani
         </h1>
       </div>
       <div style="animation: slide-up 1s cubic-bezier(0.16,1,0.3,1) 0.6s both">
-        <p class="text-neutral-400 font-light text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p class="text-neutral-400 font-light text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
           Membangun pengalaman web yang modern, responsif, dan berperforma tinggi — dari konsep hingga kode.
         </p>
       </div>
-      <div style="animation: slide-up 1s cubic-bezier(0.16,1,0.3,1) 0.8s both" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#projects" class="neon-bg text-black px-8 py-4 rounded-btn font-semibold text-sm uppercase tracking-tight hover:bg-white transition-colors inline-flex items-center gap-2">
+      <div style="animation: slide-up 1s cubic-bezier(0.16,1,0.3,1) 0.8s both" class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-xs sm:max-w-none mx-auto">
+        <a href="#projects" class="w-full sm:w-auto neon-bg text-black px-8 py-3.5 sm:py-4 rounded-btn font-semibold text-xs sm:text-sm uppercase tracking-tight hover:bg-white transition-colors inline-flex items-center justify-center gap-2">
           Lihat Proyek <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
         </a>
-        <a href="#about" class="border border-neutral-700 px-8 py-4 rounded-btn font-medium text-sm uppercase tracking-tight hover:border-neon hover:text-neon transition-colors">
+        <a href="#about" class="w-full sm:w-auto border border-neutral-700 px-8 py-3.5 sm:py-4 rounded-btn font-medium text-xs sm:text-sm uppercase tracking-tight hover:border-neon hover:text-neon transition-colors text-center">
           Kenali Saya
         </a>
       </div>
     </div>
 
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style="animation: fade-in 1s ease 1.5s both">
+    <div class="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style="animation: fade-in 1s ease 1.5s both">
       <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-600">Scroll</span>
-      <div class="w-px h-12 bg-gradient-to-b from-neon/50 to-transparent"></div>
+      <div class="w-px h-8 sm:h-12 bg-gradient-to-b from-neon/50 to-transparent"></div>
     </div>
   </section>
 
-  <div class="border-y border-neutral-800 py-4 overflow-hidden">
+  <!-- MARQUEE SECTION -->
+  <div class="border-y border-neutral-800 py-3 sm:py-4 overflow-hidden w-full">
     <div class="marquee whitespace-nowrap">
-      <span class="inline-flex items-center gap-8 text-sm font-heading uppercase tracking-widest text-neutral-600 mx-4">
+      <span class="inline-flex items-center gap-4 sm:gap-8 text-xs sm:text-sm font-heading uppercase tracking-widest text-neutral-600 mx-2 sm:mx-4">
         <span>HTML5</span><span class="neon-text">✦</span>
         <span>CSS3</span><span class="neon-text">✦</span>
         <span>JavaScript</span><span class="neon-text">✦</span>
@@ -112,8 +113,10 @@
         <span>Responsive Design</span><span class="neon-text">✦</span>
         <span>Figma</span><span class="neon-text">✦</span>
         <span>REST API</span><span class="neon-text">✦</span>
+        <span>Laravel</span><span class="neon-text">✦</span>
+        <span>Next.js</span><span class="neon-text">✦</span>
       </span>
-      <span class="inline-flex items-center gap-8 text-sm font-heading uppercase tracking-widest text-neutral-600 mx-4">
+      <span class="inline-flex items-center gap-4 sm:gap-8 text-xs sm:text-sm font-heading uppercase tracking-widest text-neutral-600 mx-2 sm:mx-4">
         <span>HTML5</span><span class="neon-text">✦</span>
         <span>CSS3</span><span class="neon-text">✦</span>
         <span>JavaScript</span><span class="neon-text">✦</span>
@@ -124,50 +127,53 @@
         <span>Responsive Design</span><span class="neon-text">✦</span>
         <span>Figma</span><span class="neon-text">✦</span>
         <span>REST API</span><span class="neon-text">✦</span>
+        <span>Laravel</span><span class="neon-text">✦</span>
+        <span>Next.js</span><span class="neon-text">✦</span>
       </span>
     </div>
   </div>
 
-  <section id="about" class="py-24 md:py-32 relative">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 sm:py-24 md:py-32 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div class="reveal-left relative">
-          <div class="relative rounded-[30px] overflow-hidden group">
-            <img src="assets/fotoporto.png" alt="Pandu Fawaz Rabbani" class="w-full h-[500px] md:h-[600px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" />
+          <div class="relative rounded-[24px] sm:rounded-[30px] overflow-hidden group">
+            <img src="assets/fotoporto.png" alt="Pandu Fawaz Rabbani" class="w-full h-[380px] sm:h-[500px] md:h-[600px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
           </div>
-          <div class="absolute -bottom-4 -right-4 md:bottom-8 md:-right-8 bg-neutral-900/80 backdrop-blur-xl border border-neutral-800 rounded-custom p-5 animate-pulse-glow">
-            <p class="font-heading text-3xl font-500 neon-text">3+</p>
-            <p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Tahun<br/>Pengalaman</p>
+          <div class="absolute bottom-4 right-4 sm:-bottom-4 sm:-right-4 bg-neutral-900/90 backdrop-blur-xl border border-neutral-800 rounded-2xl sm:rounded-custom p-4 sm:p-5 animate-pulse-glow">
+            <p class="font-heading text-2xl sm:text-3xl font-500 neon-text">14+</p>
+            <p class="text-[10px] sm:text-xs text-neutral-400 uppercase tracking-wider mt-0.5 sm:mt-1">bulan<br/>Pengalaman</p>
           </div>
         </div>
 
         <div class="reveal-right">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-4">Tentang Saya</p>
-          <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase leading-[1.1] mb-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-3 sm:mb-4">Tentang Saya</p>
+          <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase leading-[1.1] mb-5 sm:mb-6">
             Passion Dalam<br/><span class="text-gradient">Setiap Baris</span><br/>Kode
           </h2>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">
+          <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
             Saya Pandu Fawaz Rabbani, seorang Junior Web Developer yang antusias dalam membangun antarmuka web yang bersih, fungsional, dan berdampak. Saya percaya bahwa desain yang baik dan kode yang rapi adalah fondasi dari pengalaman digital yang luar biasa.
           </p>
-          <p class="text-neutral-400 font-light leading-relaxed mb-8">
+          <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
             Dengan latar belakang dalam HTML, CSS, JavaScript, dan framework modern seperti React.js serta Tailwind CSS, saya terus mengembangkan kemampuan untuk memberikan solusi web terbaik. Setiap proyek adalah kesempatan untuk belajar dan berkembang.
           </p>
-          <div class="grid grid-cols-3 gap-6 mb-8">
-            <div class="border-t border-neutral-800 pt-4">
-              <p class="font-heading text-2xl md:text-3xl font-500 neon-text">10+</p>
-              <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Proyek</p>
+          <div class="grid grid-cols-3 gap-3 sm:gap-6 mb-8">
+            <div class="border-t border-neutral-800 pt-3 sm:pt-4">
+              <p class="font-heading text-xl sm:text-2xl md:text-3xl font-500 neon-text">10+</p>
+              <p class="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1">Proyek</p>
             </div>
-            <div class="border-t border-neutral-800 pt-4">
-              <p class="font-heading text-2xl md:text-3xl font-500 neon-text">5+</p>
-              <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Klien</p>
+            <div class="border-t border-neutral-800 pt-3 sm:pt-4">
+              <p class="font-heading text-xl sm:text-2xl md:text-3xl font-500 neon-text">5+</p>
+              <p class="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1">Klien</p>
             </div>
-            <div class="border-t border-neutral-800 pt-4">
-              <p class="font-heading text-2xl md:text-3xl font-500 neon-text">100%</p>
-              <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">Dedikasi</p>
+            <div class="border-t border-neutral-800 pt-3 sm:pt-4">
+              <p class="font-heading text-xl sm:text-2xl md:text-3xl font-500 neon-text">100%</p>
+              <p class="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider mt-1">Dedikasi</p>
             </div>
           </div>
-          <a href="#contact" class="inline-flex items-center gap-2 neon-bg text-black px-7 py-3.5 rounded-btn font-semibold text-sm uppercase tracking-tight hover:bg-white transition-colors">
+          <a href="#contact" class="inline-flex items-center gap-2 neon-bg text-black px-6 sm:px-7 py-3 sm:py-3.5 rounded-btn font-semibold text-xs sm:text-sm uppercase tracking-tight hover:bg-white transition-colors">
             Mari Bekerja Sama <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
@@ -175,23 +181,24 @@
     </div>
   </section>
 
-  <section id="skills" class="py-24 md:py-32 relative">
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-16 sm:py-24 md:py-32 relative overflow-hidden">
     <div class="absolute inset-0 hero-bg pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="text-center mb-16 reveal">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-4">Keahlian</p>
-        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-3 sm:mb-4">Keahlian</p>
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase">
           Tech <span class="text-gradient">Stack</span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="reveal stagger-1 group bg-neutral-900/30 border border-neutral-800 rounded-[30px] p-8 hover:border-neon/30 card-glow transition-all duration-300">
-          <div class="w-14 h-14 rounded-[20px] bg-neon/10 flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
-            <i data-lucide="code-2" class="w-6 h-6 neon-text"></i>
+        <div class="reveal stagger-1 group bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 hover:border-neon/30 card-glow transition-all duration-300">
+          <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-[16px] sm:rounded-[20px] bg-neon/10 flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-neon/20 transition-colors">
+            <i data-lucide="code-2" class="w-5 sm:w-6 h-5 sm:h-6 neon-text"></i>
           </div>
-          <h3 class="font-heading text-xl font-500 tracking-tight uppercase mb-3">Frontend</h3>
-          <p class="text-neutral-400 font-light text-sm leading-relaxed mb-6">Membangun UI yang interaktif dan responsif dengan teknologi modern.</p>
+          <h3 class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase mb-2 sm:mb-3">Frontend</h3>
+          <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-6">Membangun UI yang interaktif dan responsif dengan teknologi modern.</p>
           <div class="space-y-4">
             <div>
               <div class="flex justify-between text-xs mb-1.5"><span class="text-neutral-300">HTML / CSS</span><span class="neon-text">90%</span></div>
@@ -208,12 +215,12 @@
           </div>
         </div>
 
-        <div class="reveal stagger-2 group bg-neutral-900/30 border border-neutral-800 rounded-[30px] p-8 hover:border-neon/30 card-glow transition-all duration-300">
-          <div class="w-14 h-14 rounded-[20px] bg-neon/10 flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
-            <i data-lucide="palette" class="w-6 h-6 neon-text"></i>
+        <div class="reveal stagger-2 group bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 hover:border-neon/30 card-glow transition-all duration-300">
+          <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-[16px] sm:rounded-[20px] bg-neon/10 flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-neon/20 transition-colors">
+            <i data-lucide="palette" class="w-5 sm:w-6 h-5 sm:h-6 neon-text"></i>
           </div>
-          <h3 class="font-heading text-xl font-500 tracking-tight uppercase mb-3">Styling</h3>
-          <p class="text-neutral-400 font-light text-sm leading-relaxed mb-6">Desain pixel-perfect dengan utility-first CSS framework.</p>
+          <h3 class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase mb-2 sm:mb-3">Styling</h3>
+          <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-6">Desain pixel-perfect dengan utility-first CSS framework.</p>
           <div class="space-y-4">
             <div>
               <div class="flex justify-between text-xs mb-1.5"><span class="text-neutral-300">Tailwind CSS</span><span class="neon-text">85%</span></div>
@@ -230,12 +237,12 @@
           </div>
         </div>
 
-        <div class="reveal stagger-3 group bg-neutral-900/30 border border-neutral-800 rounded-[30px] p-8 hover:border-neon/30 card-glow transition-all duration-300">
-          <div class="w-14 h-14 rounded-[20px] bg-neon/10 flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
-            <i data-lucide="server" class="w-6 h-6 neon-text"></i>
+        <div class="reveal stagger-3 group bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 hover:border-neon/30 card-glow transition-all duration-300">
+          <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-[16px] sm:rounded-[20px] bg-neon/10 flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-neon/20 transition-colors">
+            <i data-lucide="server" class="w-5 sm:w-6 h-5 sm:h-6 neon-text"></i>
           </div>
-          <h3 class="font-heading text-xl font-500 tracking-tight uppercase mb-3">Backend & Tools</h3>
-          <p class="text-neutral-400 font-light text-sm leading-relaxed mb-6">Mengelola server, API, dan workflow pengembangan.</p>
+          <h3 class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase mb-2 sm:mb-3">Backend & Tools</h3>
+          <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-6">Mengelola server, API, dan workflow pengembangan.</p>
           <div class="space-y-4">
             <div>
               <div class="flex justify-between text-xs mb-1.5"><span class="text-neutral-300">Node.js</span><span class="neon-text">65%</span></div>
@@ -255,73 +262,74 @@
     </div>
   </section>
 
-  <section id="projects" class="py-24 md:py-32">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16 reveal">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-4">Portofolio</p>
-        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase">
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-16 sm:py-24 md:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-3 sm:mb-4">Portofolio</p>
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase">
           Proyek <span class="text-gradient">Terbaru</span>
         </h2>
       </div>
 
-      <div class="space-y-8">
-        <div class="reveal group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-neutral-900/30 border border-neutral-800 rounded-[30px] overflow-hidden hover:border-neon/30 card-glow transition-all duration-300">
-          <div class="relative h-64 lg:h-auto overflow-hidden">
+      <div class="space-y-6 sm:space-y-8">
+        <div class="reveal group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] overflow-hidden hover:border-neon/30 card-glow transition-all duration-300">
+          <div class="relative h-52 sm:h-64 lg:h-auto overflow-hidden">
             <img src="assets/gallerymockers.png" alt="Art Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
             <div class="absolute inset-0 bg-gradient-to-r from-transparent to-neutral-900/50 hidden lg:block"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent lg:hidden"></div>
           </div>
-          <div class="p-8 md:p-12 flex flex-col justify-center">
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">HTML</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">CSS</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">JavaScript</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">Bootstrap</span>
+          <div class="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">HTML</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">CSS</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">JavaScript</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">Bootstrap</span>
             </div>
-            <h3 class="font-heading text-2xl md:text-3xl font-500 tracking-tight uppercase mb-3">Gallery Mockers</h3>
-            <p class="text-neutral-400 font-light text-sm leading-relaxed mb-6">Platform berbagai macam design.</p>
-            <a href="https://feast-n.github.io/gallerymockers/" class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-tight neon-text hover:text-white transition-colors">
+            <h3 class="font-heading text-xl sm:text-2xl md:text-3xl font-500 tracking-tight uppercase mb-2 sm:mb-3">Gallery Mockers</h3>
+            <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">Platform berbagai macam art.</p>
+            <a href="../gallerymockers" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-tight neon-text hover:text-white transition-colors">
               Lihat Detail <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
             </a>
           </div>
         </div>
 
-        <div class="reveal group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-neutral-900/30 border border-neutral-800 rounded-[30px] overflow-hidden hover:border-neon/30 card-glow transition-all duration-300">
-          <div class="p-8 md:p-12 flex flex-col justify-center order-2 lg:order-1">
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">JavaScript</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">CSS3</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">HTML</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">TAILWIND</span>
+        <div class="reveal group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] overflow-hidden hover:border-neon/30 card-glow transition-all duration-300">
+          <div class="p-6 sm:p-8 md:p-12 flex flex-col justify-center order-2 lg:order-1">
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">JavaScript</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">CSS3</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">HTML</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">TAILWIND</span>
             </div>
-            <h3 class="font-heading text-2xl md:text-3xl font-500 tracking-tight uppercase mb-3">Arkitekt</h3>
-            <p class="text-neutral-400 font-light text-sm leading-relaxed mb-6">Company Profile Design</p>
-            <a href="https://feast-n.github.io/gallerymockers/" class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-tight neon-text hover:text-white transition-colors">
+            <h3 class="font-heading text-xl sm:text-2xl md:text-3xl font-500 tracking-tight uppercase mb-2 sm:mb-3">Arkitekt</h3>
+            <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">Company Profile Architect</p>
+            <a href="../arkitekt" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-tight neon-text hover:text-white transition-colors">
               Lihat Detail <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
             </a>
           </div>
-          <div class="relative h-64 lg:h-auto overflow-hidden order-1 lg:order-2">
+          <div class="relative h-52 sm:h-64 lg:h-auto overflow-hidden order-1 lg:order-2">
             <img src="assets/arkitekt.png" alt="Arkitekt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
             <div class="absolute inset-0 bg-gradient-to-l from-transparent to-neutral-900/50 hidden lg:block"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent lg:hidden"></div>
           </div>
         </div>
 
-        <div class="reveal group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-neutral-900/30 border border-neutral-800 rounded-[30px] overflow-hidden hover:border-neon/30 card-glow transition-all duration-300">
-          <div class="relative h-64 lg:h-auto overflow-hidden">
+        <div class="reveal group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] overflow-hidden hover:border-neon/30 card-glow transition-all duration-300">
+          <div class="relative h-52 sm:h-64 lg:h-auto overflow-hidden">
             <img src="assets/ppkdjucopy.png" alt="copyppkdju" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
             <div class="absolute inset-0 bg-gradient-to-r from-transparent to-neutral-900/50 hidden lg:block"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent lg:hidden"></div>
           </div>
-          <div class="p-8 md:p-12 flex flex-col justify-center">
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">HTML</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">JavaScript</span>
-              <span class="text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-3 py-1 rounded-full">CSS</span>
+          <div class="p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">HTML</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">JavaScript</span>
+              <span class="text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neon bg-neon/10 px-2.5 sm:px-3 py-1 rounded-full">CSS</span>
             </div>
-            <h3 class="font-heading text-2xl md:text-3xl font-500 tracking-tight uppercase mb-3">Copy PPKD JU</h3>
-            <p class="text-neutral-400 font-light text-sm leading-relaxed mb-6">Copy Page PPKD JU</p>
-            <a href="assets/D1_010726.rar" download class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-tight neon-text hover:text-white transition-colors">
+            <h3 class="font-heading text-xl sm:text-2xl md:text-3xl font-500 tracking-tight uppercase mb-2 sm:mb-3">Copy PPKD JU</h3>
+            <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">Copy Page PPKD JU</p>
+            <a href="assets/D1_010726.rar" download class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-tight neon-text hover:text-white transition-colors">
               Lihat Detail <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
             </a>
           </div>
@@ -330,50 +338,51 @@
     </div>
   </section>
 
-  <section id="experience" class="py-24 md:py-32 relative">
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="py-16 sm:py-24 md:py-32 relative overflow-hidden">
     <div class="absolute inset-0 hero-bg pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="text-center mb-16 reveal">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-4">Perjalanan</p>
-        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-3 sm:mb-4">Perjalanan</p>
+        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase">
           Pengalaman & <span class="text-gradient">Pendidikan</span>
         </h2>
       </div>
 
       <div class="max-w-3xl mx-auto">
         <div class="relative">
-          <div class="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-neutral-800"></div>
+          <div class="absolute left-3.5 sm:left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-neutral-800"></div>
 
-          <div class="reveal stagger-1 relative flex flex-col md:flex-row items-start mb-12">
-            <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
-              <p class="text-xs font-semibold uppercase tracking-widest neon-text mb-2">2024 — Sekarang</p>
-              <h3 class="font-heading text-xl font-500 tracking-tight uppercase mb-2">Web Developer</h3>
-              <p class="text-neutral-500 text-sm mb-2">Freelance</p>
-              <p class="text-neutral-400 font-light text-sm leading-relaxed">Membangun website dan aplikasi web untuk berbagai klien. Fokus pada frontend development dengan React dan Tailwind CSS.</p>
+          <div class="reveal stagger-1 relative flex flex-col md:flex-row items-start mb-10 sm:mb-12">
+            <div class="md:w-1/2 md:pr-12 md:text-right pl-10 sm:pl-12 md:pl-0">
+              <p class="text-xs font-semibold uppercase tracking-widest neon-text mb-1.5 sm:mb-2">2024 — Sekarang</p>
+              <h3 class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase mb-1.5 sm:mb-2">Web Developer</h3>
+              <p class="text-neutral-500 text-xs sm:text-sm mb-2">Freelance</p>
+              <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed">Membangun website dan aplikasi web untuk berbagai klien. Fokus pada frontend development dengan React dan Tailwind CSS.</p>
             </div>
-            <div class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-neon border-4 border-black mt-1"></div>
+            <div class="absolute left-2 sm:left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-neon border-4 border-black mt-1"></div>
             <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
           </div>
 
-          <div class="reveal stagger-2 relative flex flex-col md:flex-row items-start mb-12">
+          <div class="reveal stagger-2 relative flex flex-col md:flex-row items-start mb-10 sm:mb-12">
             <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
-            <div class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-neutral-700 border-4 border-black mt-1"></div>
-            <div class="md:w-1/2 md:pl-12 pl-12">
-              <p class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-2">2026</p>
-              <h3 class="font-heading text-xl font-500 tracking-tight uppercase mb-2">Sertifikasi Web Development</h3>
-              <p class="text-neutral-500 text-sm mb-2">PPKD Jakarta Utara</p>
-              <p class="text-neutral-400 font-light text-sm leading-relaxed">Menyelesaikan program sertifikasi "Menjadi Front-End Web Developer Expert" dengan fokus pada JavaScript, React, dan testing.</p>
+            <div class="absolute left-2 sm:left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-neutral-700 border-4 border-black mt-1"></div>
+            <div class="md:w-1/2 md:pl-12 pl-10 sm:pl-12">
+              <p class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-1.5 sm:mb-2">2026</p>
+              <h3 class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase mb-1.5 sm:mb-2">Sertifikasi Web Development</h3>
+              <p class="text-neutral-500 text-xs sm:text-sm mb-2">PPKD Jakarta Utara</p>
+              <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed">Menyelesaikan program sertifikasi "Menjadi Front-End Web Developer Expert" dengan fokus pada JavaScript, React, dan testing.</p>
             </div>
           </div>
 
-          <div class="reveal stagger-3 relative flex flex-col md:flex-row items-start mb-12">
-            <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
-              <p class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-2">2023 — 2027</p>
-              <h3 class="font-heading text-xl font-500 tracking-tight uppercase mb-2">S1 Sistem Informasi</h3>
-              <p class="text-neutral-500 text-sm mb-2">Universitas Terbuka</p>
-              <p class="text-neutral-400 font-light text-sm leading-relaxed">Mempelajari dasar-dasar pemrograman, algoritma, basis data, jaringan komputer, dan rekayasa perangkat lunak.</p>
+          <div class="reveal stagger-3 relative flex flex-col md:flex-row items-start mb-10 sm:mb-12">
+            <div class="md:w-1/2 md:pr-12 md:text-right pl-10 sm:pl-12 md:pl-0">
+              <p class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-1.5 sm:mb-2">2023 — 2027</p>
+              <h3 class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase mb-1.5 sm:mb-2">S1 Sistem Informasi</h3>
+              <p class="text-neutral-500 text-xs sm:text-sm mb-2">Universitas Terbuka</p>
+              <p class="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed">Mempelajari dasar-dasar pemrograman, algoritma, basis data, jaringan komputer, dan rekayasa perangkat lunak.</p>
             </div>
-            <div class="absolute left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-neutral-600 border-4 border-black mt-1"></div>
+            <div class="absolute left-2 sm:left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-neutral-600 border-4 border-black mt-1"></div>
             <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
           </div>
         </div>
@@ -381,102 +390,103 @@
     </div>
   </section>
 
-  <section id="contact" class="py-24 md:py-32 relative">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-16 sm:py-24 md:py-32 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
         <div class="reveal-left">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-4">Kontak</p>
-          <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase leading-[1.1] mb-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-neon mb-3 sm:mb-4">Kontak</p>
+          <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-500 tracking-tight uppercase leading-[1.1] mb-5 sm:mb-6">
             Mari<br/>Berkolaborasi<br/><span class="text-gradient">Bersama</span>
           </h2>
-          <p class="text-neutral-400 font-light leading-relaxed mb-10 max-w-md">
+          <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-md">
             Punya proyek menarik atau ingin berdiskusi? Saya selalu terbuka untuk peluang baru dan kolaborasi kreatif.
           </p>
-          <div class="space-y-6 mb-10">
-            <a href="mailto:pandu@example.com" class="flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-[16px] bg-neutral-900 border border-neutral-800 flex items-center justify-center group-hover:border-neon/30 transition-colors">
-                <i data-lucide="mail" class="w-5 h-5 text-neutral-400 group-hover:text-neon transition-colors"></i>
+          <div class="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
+            <a href="mailto:pandufawazrabbani2004@gmail.com" class="flex items-center gap-3 sm:gap-4 group">
+              <div class="w-10 sm:w-12 h-10 sm:h-12 rounded-[14px] sm:rounded-[16px] bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 group-hover:border-neon/30 transition-colors">
+                <i data-lucide="mail" class="w-4 sm:w-5 h-4 sm:h-5 text-neutral-400 group-hover:text-neon transition-colors"></i>
               </div>
-              <div>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider">Email</p>
-                <p class="text-neutral-300 font-light group-hover:text-neon transition-colors">pandufawazrabbani2004@gmail.com</p>
-              </div>
-            </a>
-            <a href="tel:+6281234567890" class="flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-[16px] bg-neutral-900 border border-neutral-800 flex items-center justify-center group-hover:border-neon/30 transition-colors">
-                <i data-lucide="phone" class="w-5 h-5 text-neutral-400 group-hover:text-neon transition-colors"></i>
-              </div>
-              <div>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider">Telepon</p>
-                <p class="text-neutral-300 font-light group-hover:text-neon transition-colors">+62 851 5516 1156</p>
+              <div class="min-w-0">
+                <p class="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider">Email</p>
+                <p class="text-neutral-300 font-light text-xs sm:text-sm group-hover:text-neon transition-colors truncate">pandufawazrabbani2004@gmail.com</p>
               </div>
             </a>
-            <a href="#" class="flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-[16px] bg-neutral-900 border border-neutral-800 flex items-center justify-center group-hover:border-neon/30 transition-colors">
-                <i data-lucide="map-pin" class="w-5 h-5 text-neutral-400 group-hover:text-neon transition-colors"></i>
+            <a href="tel:+6285155161156" class="flex items-center gap-3 sm:gap-4 group">
+              <div class="w-10 sm:w-12 h-10 sm:h-12 rounded-[14px] sm:rounded-[16px] bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 group-hover:border-neon/30 transition-colors">
+                <i data-lucide="phone" class="w-4 sm:w-5 h-4 sm:h-5 text-neutral-400 group-hover:text-neon transition-colors"></i>
               </div>
               <div>
-                <p class="text-xs text-neutral-500 uppercase tracking-wider">Lokasi</p>
-                <p class="text-neutral-300 font-light group-hover:text-neon transition-colors">Jakarta, Indonesia</p>
+                <p class="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider">Telepon</p>
+                <p class="text-neutral-300 font-light text-xs sm:text-sm group-hover:text-neon transition-colors">+62 851 5516 1156</p>
+              </div>
+            </a>
+            <a href="#" class="flex items-center gap-3 sm:gap-4 group">
+              <div class="w-10 sm:w-12 h-10 sm:h-12 rounded-[14px] sm:rounded-[16px] bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0 group-hover:border-neon/30 transition-colors">
+                <i data-lucide="map-pin" class="w-4 sm:w-5 h-4 sm:h-5 text-neutral-400 group-hover:text-neon transition-colors"></i>
+              </div>
+              <div>
+                <p class="text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider">Lokasi</p>
+                <p class="text-neutral-300 font-light text-xs sm:text-sm group-hover:text-neon transition-colors">Jakarta, Indonesia</p>
               </div>
             </a>
           </div>
           <div class="flex gap-3">
-            <div class="flex gap-3">
-              <a href="https://github.com/feast-n" target="_blank" class="w-11 h-11 rounded-[14px] bg-[#A6E93A] flex items-center justify-center hover:bg-white transition-colors">
-                <i data-lucide="github" class="w-5 h-5 text-black"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/pandu-fawaz-rabbani-530783289/" target="_blank" class="w-11 h-11 rounded-[14px] bg-[#A6E93A] flex items-center justify-center hover:bg-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 h-5 text-black"></i>
-              </a>
-            </div>
+            <a href="https://github.com/feast-n" target="_blank" class="w-10 sm:w-11 h-10 sm:h-11 rounded-[12px] sm:rounded-[14px] bg-[#A6E93A] flex items-center justify-center hover:bg-white transition-colors">
+              <i data-lucide="github" class="w-4 sm:w-5 h-4 sm:h-5 text-black"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pandu-fawaz-rabbani-530783289/" target="_blank" class="w-10 sm:w-11 h-10 sm:h-11 rounded-[12px] sm:rounded-[14px] bg-[#A6E93A] flex items-center justify-center hover:bg-white transition-colors">
+              <i data-lucide="linkedin" class="w-4 sm:w-5 h-4 sm:h-5 text-black"></i>
+            </a>
           </div>
         </div>
 
         <div class="reveal-right">
-          <form id="contactForm" class="bg-neutral-900/30 border border-neutral-800 rounded-[30px] p-8 md:p-10 space-y-6">
+          <form id="contactForm" class="bg-neutral-900/30 border border-neutral-800 rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-6">
             <div>
-              <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Nama Lengkap</label>
-              <input type="text" name="full-name" pattern="[A-Za-z\s\-']+" placeholder="Masukkan nama Anda" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
+              <label class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1.5 sm:mb-2 block">Nama Lengkap</label>
+              <input type="text" name="full-name" pattern="[A-Za-z\s\-']+" placeholder="Masukkan nama Anda" class="w-full bg-black border border-neutral-800 rounded-[16px] sm:rounded-[20px] px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
             </div>
             <div>
-              <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Email / Nomor Telepon</label>
-              <input type="text" name="contact-info" placeholder="nama@email.com atau 081234567890" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
+              <label class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1.5 sm:mb-2 block">Email / Nomor Telepon</label>
+              <input type="text" name="contact-info" placeholder="nama@email.com atau 081234567890" class="w-full bg-black border border-neutral-800 rounded-[16px] sm:rounded-[20px] px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" required />
             </div>
             <div>
-              <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Subjek</label>
-              <input type="text" placeholder="Tentang apa?" class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" />
+              <label class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1.5 sm:mb-2 block">Subjek</label>
+              <input type="text" placeholder="Tentang apa?" class="w-full bg-black border border-neutral-800 rounded-[16px] sm:rounded-[20px] px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors" />
             </div>
             <div>
-              <label class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 block">Pesan</label>
-              <textarea rows="5" placeholder="Ceritakan proyek atau ide Anda..." class="w-full bg-black border border-neutral-800 rounded-[20px] px-6 py-4 text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors resize-none" required></textarea>
+              <label class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1.5 sm:mb-2 block">Pesan</label>
+              <textarea rows="4" placeholder="Ceritakan proyek atau ide Anda..." class="w-full bg-black border border-neutral-800 rounded-[16px] sm:rounded-[20px] px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-white font-light placeholder:text-neutral-600 focus:outline-none focus:border-neon/50 transition-colors resize-none" required></textarea>
             </div>
-            <button type="submit" class="w-full neon-bg text-black py-4 rounded-btn font-semibold text-sm uppercase tracking-tight hover:bg-white transition-colors flex items-center justify-center gap-2">
+            <button type="submit" class="w-full neon-bg text-black py-3.5 sm:py-4 rounded-btn font-semibold text-xs sm:text-sm uppercase tracking-tight hover:bg-white transition-colors flex items-center justify-center gap-2">
               Kirim Pesan <i data-lucide="send" class="w-4 h-4"></i>
             </button>
-            <div id="formMessage" class="hidden text-center text-sm font-medium py-3 rounded-[16px]"></div>
+            <div id="formMessage" class="hidden text-center text-xs sm:text-sm font-medium py-3 rounded-[16px]"></div>
           </form>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="border-t border-neutral-800">
-    <div class="max-w-7xl mx-auto px-6 py-10">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
         <div class="flex items-center gap-3">
-          <span class="font-heading text-xl font-500 tracking-tight uppercase"><span class="neon-text">P</span>andu<span class="text-neutral-500">.</span></span>
-          <span class="text-neutral-600 text-sm">© 2026</span>
+          <span class="font-heading text-lg sm:text-xl font-500 tracking-tight uppercase"><span class="neon-text">P</span>andu<span class="text-neutral-500">.</span></span>
+          <span class="text-neutral-600 text-xs sm:text-sm">© 2026</span>
         </div>
-        <p class="text-neutral-600 text-sm font-light text-center">
+        <p class="text-neutral-600 text-xs sm:text-sm font-light text-center">
           Dibangun dengan <span class="neon-text">♥</span> menggunakan HTML, Tailwind CSS & JavaScript
         </p>
-        <a href="#hero" class="w-10 h-10 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-neon hover:text-neon transition-colors" title="Kembali ke atas">
+        <a href="#hero" class="w-9 sm:w-10 h-9 sm:h-10 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-neon hover:text-neon transition-colors" title="Kembali ke atas">
           <i data-lucide="arrow-up" class="w-4 h-4"></i>
         </a>
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
